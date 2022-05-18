@@ -1,0 +1,12 @@
+/**app.wxss**/
+page {
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.van-search__content {
+  background-color: #fff !important;
+}
+.van-search {
+  padding: 10px 0 !important;
+}

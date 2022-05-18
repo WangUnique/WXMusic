@@ -1,0 +1,33 @@
+// 播放量格式化
+function formatCount(count) {
+  var counter = parseInt(count)
+  if (counter > 100000000) {
+    return (counter / 100000000).toFixed(1) + '亿'
+  } else if(counter > 10000) {
+    return (counter / 100000).toFixed(1) + '万'
+  } else {
+    return counter + ''
+  }
+} 
+// 时长优化
+// 12  =>  0012  =>  12
+// 5  =>  005  => 05
+function padLeftZero(time) {
+  time = time + '';
+  return ("00" + time).slice(time.length)
+}
+
+// 时长格式化
+function formatDuration(duration) {
+  // 转换成秒
+  duration = duration / 1000;
+  var minute = Math.floor(duration / 60);
+  var second = Math.floor(duration % 60);
+
+  return padLeftZero(minute) + ":" + padLeftZero(second);
+}
+
+module.exports = {
+  formatCount: formatCount,
+  formatDuration: formatDuration,
+}

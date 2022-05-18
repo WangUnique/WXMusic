@@ -1,0 +1,12 @@
+<!--pages/detail-video/index.wxml-->
+<video src="{{mvURLInfo.url}}" 
+       class="video"
+       danmu-list="{{danmuList}}"
+       autoplay
+       loop
+       referrer-policy="origin">
+</video>
+
+<block wx:for="{{100}}" wx:key="*this"> 
+  <view>列表数据{{item}}</view>
+</block>

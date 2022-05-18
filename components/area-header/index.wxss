@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+}
+
+.header .title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.header .default {
+  display: none;
+  align-items: center;
+  font-size: 28rpx;
+  color: #777;
+}
+
+.header .default .icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.header .slot:empty + .default {
+  /* 默认情况下上面的默认文字display为none不显示 */
+  /* 只有 slot 为空的情况下 才会给他一个flex */
+  display: flex;
+}
+
+
+
